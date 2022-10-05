@@ -1,0 +1,170 @@
+<h2 class="title">Entre em contato com a gente!</h2>
+<section class="container-form">
+  <form
+    class="contact-form"
+    [formGroup]="formControl"
+    (ngSubmit)="enviarForm()"
+  >
+    <input
+      type="text"
+      placeholder="Insira seu nome"
+      formControlName="nome"
+      [class.valid]="formControl.controls['nome'].valid"
+      [class.invalid]="
+        formControl.controls['nome'].invalid &&
+        (formControl.controls['nome'].touched ||
+          formControl.controls['nome'].dirty)
+      "
+    />
+    <div
+      *ngIf="
+        formControl.controls['nome'].invalid &&
+        (formControl.controls['nome'].touched ||
+          formControl.controls['nome'].dirty)
+      "
+    >
+      <small
+        class="error-message"
+        *ngIf="formControl.controls['nome'].hasError('minlength')"
+        >Insira no mínimo 6 caracteres!</small
+      >
+      <small
+        class="error-message"
+        *ngIf="formControl.controls['nome'].hasError('required')"
+        >Campo obrigatório!</small
+      >
+    </div>
+    <input
+      type="email"
+      placeholder="Insira seu e-mail"
+      formControlName="email"
+      [class.valid]="formControl.controls['email'].valid"
+      [class.invalid]="
+        formControl.controls['email'].invalid &&
+        (formControl.controls['email'].touched ||
+          formControl.controls['email'].dirty)
+      "
+    />
+    <div
+      *ngIf="
+        formControl.controls['email'].invalid &&
+        (formControl.controls['email'].touched ||
+          formControl.controls['email'].dirty)
+      "
+    >
+      <small
+        class="error-message"
+        *ngIf="formControl.controls['email'].hasError('email')"
+        >Insira um email valido!</small
+      >
+      <small
+        class="error-message"
+        *ngIf="formControl.controls['email'].hasError('required')"
+        >Campo obrigatório!</small
+      >
+    </div>
+    <input
+      type="tel"
+      placeholder="(00) 0 0000-0000"
+      mask="(00) 0 0000-0000"
+      formControlName="telefone"
+      [class.valid]="formControl.controls['telefone'].valid"
+      [class.invalid]="
+        formControl.controls['telefone'].invalid &&
+        (formControl.controls['telefone'].touched ||
+          formControl.controls['telefone'].dirty)
+      "
+    />
+    <div
+      *ngIf="
+        formControl.controls['telefone'].invalid &&
+        (formControl.controls['telefone'].touched ||
+          formControl.controls['telefone'].dirty)
+      "
+    >
+      <small
+        class="error-message"
+        *ngIf="formControl.controls['telefone'].hasError('minlength')"
+        >Insira no mínimo 11 caracteres!</small
+      >
+      <small
+        class="error-message"
+        *ngIf="formControl.controls['telefone'].hasError('required')"
+        >Campo obrigatório!</small
+      >
+    </div>
+    <input
+      type="text"
+      placeholder="Qual o assunto?"
+      formControlName="assunto"
+      [class.valid]="formControl.controls['assunto'].valid"
+      [class.invalid]="
+        formControl.controls['assunto'].invalid &&
+        (formControl.controls['assunto'].touched ||
+          formControl.controls['assunto'].dirty)
+      "
+    />
+    <div
+      *ngIf="
+        formControl.controls['assunto'].invalid &&
+        (formControl.controls['assunto'].touched ||
+          formControl.controls['assunto'].dirty)
+      "
+    >
+      <small
+        class="error-message"
+        *ngIf="formControl.controls['assunto'].hasError('minlength')"
+        >Insira no mínimo 13 caracteres!</small
+      >
+      <small
+        class="error-message"
+        *ngIf="formControl.controls['assunto'].hasError('required')"
+        >Campo obrigatório!</small
+      >
+    </div>
+    <textarea
+      maxlength="300"
+      placeholder="Digite a sua mensagem aqui!"
+      formControlName="mensagem"
+      [class.valid]="formControl.controls['mensagem'].valid"
+      [class.invalid]="
+        formControl.controls['mensagem'].invalid &&
+        (formControl.controls['mensagem'].touched ||
+          formControl.controls['mensagem'].dirty)
+      "
+    ></textarea>
+    <div
+      *ngIf="
+        formControl.controls['mensagem'].invalid &&
+        (formControl.controls['mensagem'].touched ||
+          formControl.controls['mensagem'].dirty)
+      "
+    >
+      <small
+        class="error-message"
+        *ngIf="formControl.controls['mensagem'].hasError('minlength')"
+        >Insira no mínimo 30 caracteres!</small
+      >
+      <small
+        class="error-message"
+        *ngIf="formControl.controls['mensagem'].hasError('required')"
+        >Campo obrigatório!</small
+      >
+    </div>
+    <button [disabled]="formControl.invalid" type="submit">Enviar</button>
+  </form>
+  <address>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.7447339970436!2d-43.356903485432404!3d-22.774852638901333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x996513ddef2943%3A0xa07cbcb32f74d141!2sR.%20Jardim%20Bot%C3%A2nico%2C%2025%20-%20Vila%20S%C3%A3o%20Jo%C3%A3o%2C%20S%C3%A3o%20Jo%C3%A3o%20de%20Meriti%20-%20RJ%2C%2025576-140!5e0!3m2!1spt-BR!2sbr!4v1664972383839!5m2!1spt-BR!2sbr"
+      width="600"
+      height="450"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+    <p>
+      R. Jardim Botânico - Vila São João, São João de Meriti - RJ, 25576-140
+    </p>
+  </address>
+</section>

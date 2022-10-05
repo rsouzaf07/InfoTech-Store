@@ -1,0 +1,44 @@
+.title {
+  padding: 20px 0;
+}
+
+.container-form {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  border: 1px solid gray;
+  margin: 10px 0;
+  width: 500px;
+}
+
+textarea {
+  border: 1px solid gray;
+  margin: 10px 0;
+  width: 500px;
+  height: 150px;
+}
+
+button {
+  align-self: flex-end;
+  margin: 10px 0;
+  width: 100px;
+  height: 30px;
+  background-color: #6868b0;
+  color: white;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: gray;
+}
+
+button:disabled:hover {
+  filter: none;
+}

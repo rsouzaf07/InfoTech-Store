@@ -1,0 +1,46 @@
+.product-container {
+  margin-top: 20px;
+  margin-right: 20px;
+  display: flex;
+  gap: 30px;
+}
+
+img {
+  width: 350px;
+}
+
+.product-description {
+  padding: 20px;
+}
+
+.product-name {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.product-price {
+  font-size: 22px;
+}
+
+p {
+  font-size: 18px;
+  margin: 10px 0 10px;
+}
+
+input {
+  width: 50px;
+  border: 1px solid black;
+}
+
+button {
+  padding: 15px;
+  margin-top: 10px;
+  background-color: #6868b0;
+  color: white;
+  border-radius: 5px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #484881;
+}

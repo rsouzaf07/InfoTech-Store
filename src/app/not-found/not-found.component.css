@@ -1,0 +1,15 @@
+.not-found {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+img {
+  width: 500px;
+}
+
+.home {
+  padding: 15px;
+  background-color: #6868b0;
+  border-radius: 4px;
+}

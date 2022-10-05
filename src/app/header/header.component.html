@@ -1,0 +1,25 @@
+<header class="main-header">
+  <h1 class="store-name">
+    <span class="title-first-color">InfoTech</span>
+    <span class="title-second-color"> Store</span>
+  </h1>
+  <nav class="header-nav">
+    <ul>
+      <li>
+        <a routerLink="produtos">Produtos</a>
+      </li>
+      <li>
+        <a routerLink="cart">
+          <fa-icon [icon]="shoppingCart"></fa-icon>
+          <span class="badge-cart">{{
+            cartService.obtemCarrinho().length
+          }}</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="contato">Contato</a>
+      </li>
+    </ul>
+  </nav>
+  <app-search-bar></app-search-bar>
+</header>

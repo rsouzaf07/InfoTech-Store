@@ -1,0 +1,62 @@
+.main-header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 40px;
+}
+
+.store-name {
+  font-size: 60px;
+  letter-spacing: -1.5px;
+}
+
+fa-icon {
+  font-size: 20px;
+}
+
+.badge-cart {
+  background-color: #c9d1d3;
+  border-radius: 3px;
+  font-size: 15px;
+  margin-left: -3px;
+}
+
+.title-first-color {
+  color: #991818;
+  font-weight: bold;
+}
+
+.title-second-color {
+  color: gray;
+}
+
+.header-nav ul {
+  display: flex;
+  justify-content: end;
+}
+
+.header-nav a {
+  padding: 10px 10px;
+  color: #142433;
+  font-weight: 400;
+  font-size: 24px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.header-nav a:hover {
+  border-bottom: 2px solid red;
+  cursor: pointer;
+}
+
+li {
+  padding-right: 20px;
+}
+
+.badge-carrinho {
+  background-color: #071733;
+  padding: 5px 10px;
+  border-radius: 4px;
+  color: white;
+}
